@@ -20,7 +20,10 @@
         <th scope="row"><?php echo $count;?></th>
         <td><?php echo $row->product_name;?></td>
         <td><?php echo number_format($row->product_price);?></td>
-        <td><a href="<?php echo site_url('product/delete/'.$row->product_id); ?>" class="btn btn-sm btn-danger">Delete</td>
+        <td>
+            <a href="<?php echo site_url('product/get_edit/'.$row->product_id); ?>" class="btn btn-sm btn-info">Update
+            <a href="<?php echo site_url('product/delete/'.$row->product_id); ?>" class="btn btn-sm btn-danger">Delete
+        </td>
     </tr>
     <?php endforeach;?>
     </tbody>
