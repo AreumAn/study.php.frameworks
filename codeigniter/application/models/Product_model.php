@@ -14,6 +14,11 @@ class Product_model extends CI_Model {
         );
         $this->db->insert('product', $data);
     }
+
+    function delete($product_id) {
+        $this->db->where('product_id', $product_id);
+        $this->db->delete('product');
+    }
 }
 
 ?>

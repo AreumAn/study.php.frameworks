@@ -26,6 +26,12 @@ class Product extends CI_Controller {
         $this->product_model->save($product_name, $product_price);
         redirect('product');
     }
+
+    function delete() {
+        $product_id = $this->uri->segment(3);
+        $this->product_model->delete($product_id);
+        redirect('product');
+    }
 }
 
 ?>
