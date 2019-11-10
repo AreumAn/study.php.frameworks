@@ -6,6 +6,7 @@ class Blog extends CI_Controller {
     }
 
     function index() {
+        $this->load->view('header');
         $data['title'] = "This is Title";
         $data['content'] = "This is The Contents";
         $this->load->view('blog_view', $data);

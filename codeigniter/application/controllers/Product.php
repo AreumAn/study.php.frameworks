@@ -8,12 +8,16 @@ class Product extends CI_Controller {
     }
 
     function index() {
+        $this->load->view('header');
         $data['product'] = $this->product_model->get_product();
         $this->load->view('product_view', $data);
+        $this->load->view('footer');
     }
 
     function add_new() {
+        $this->load->view('header');
         $this->load->view('add_product_view');
+        $this->load->view('footer');
     }
 
     function save() {
